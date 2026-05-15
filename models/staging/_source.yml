@@ -1,0 +1,40 @@
+version: 2
+
+sources:
+  - name: itsm
+    schema: main
+    description: "Raw ITSM incident event log loaded from Kaggle dataset via dbt seed"
+
+    tables:
+      - name: incident_event_log
+        description: "One row per state change event for each incident ticket. Same ticket number appears multiple times as it moves through different states."
+
+        columns:
+          - name: number
+            description: "Unique incident ticket identifier"
+          - name: incident_state
+            description: "State of the incident at the time of this event row"
+          - name: active
+            description: "Whether the incident is currently active"
+          - name: made_sla
+            description: "Whether the incident met its SLA target - true or false"
+          - name: opened_at
+            description: "Timestamp when the incident was first opened"
+          - name: resolved_at
+            description: "Timestamp when the incident was resolved"
+          - name: closed_at
+            description: "Timestamp when the incident was closed"
+          - name: priority
+            description: "Priority level of the incident"
+          - name: category
+            description: "Category of the incident"
+          - name: subcategory
+            description: "Subcategory of the incident"
+          - name: assignment_group
+            description: "Team assigned to handle the incident"
+          - name: assigned_to
+            description: "Individual assigned to handle the incident"
+          - name: reassignment_count
+            description: "Number of times the incident was reassigned"
+          - name: reopen_count
+            description: "Number of times the incident was reopened"

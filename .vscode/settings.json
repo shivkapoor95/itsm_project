@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "name": "DuckDB",
+            "accessMode": "Read Only",
+            "previewLimit": 50,
+            "driver": "DuckDB",
+            "databaseFilePath": "/Users/shivkapoor/Documents/dbt/itsm_project/dev.duckdb"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
