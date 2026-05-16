@@ -32,8 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   itsm_project:
     staging:
-      +materialized: view
+      +materialized: table
     intermediate:
-      +materialized: view
+      +materialized: table
     marts:
       +materialized: table
