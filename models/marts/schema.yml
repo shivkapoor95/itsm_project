@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: fct_incidents
+    description: "Fact table with one row per incident ticket and all measurable fields"
+
+    columns:
+      - name: ticket_number
+        description: "Unique incident ticket identifier"
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('dim_incidents_categorization')
+              field: ticket_number
+      
+      - name: made_sla
+        description: "Whether the ticket met its SLA target"
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: opened_at
+        description: "Timestamp when the incident was opened"
+        tests:
+          - not_null
+
+  - name: dim_incidents_categorization
+    description: "Descriptive attributes for each incident ticket"
+
+    columns:
+      - name: ticket_number
+        description: "Unique incident ticket identifier"
+        tests:
+          - unique
+          - not_null
+
+      - name: priority
+        description: "Priority level of the incident"
+        tests:
+          - accepted_values:
+              values: [1, 2, 3, 4]
+
+      - name: impact
+        description: "Impact level of the incident"
+        tests:
+          - accepted_values:
+              values: [1, 2, 3]
+
+      - name: urgency
+        description: "Urgency level of the incident"
+        tests:
+          - accepted_values:
+              values: [1, 2, 3]
