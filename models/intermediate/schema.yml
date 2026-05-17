@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: int_incident_event_final_state
+    description: "One row per ticket showing final state"
+
+    columns:
+      - name: ticket_number
+        description: "Unique incident ticket identifier"
+        tests:
+          - unique
+          - not_null

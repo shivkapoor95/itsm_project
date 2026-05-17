@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_incident_event_log
+    description: "Cleaned and renamed raw incident event log"
+
+    columns:
+      - name: ticket_number
+        description: "Incident ticket identifier"
+        tests:
+          - not_null
