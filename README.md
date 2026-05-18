@@ -22,11 +22,10 @@ Architecture
 - Python
 - Git
 
-How to Run
-Steps for someone to clone and run the project themselves:
+## How to Run
 
-Clone the repo
-Create virtual environment
-pip install dbt-core dbt-duckdb
-Configure profiles.yml
-Run dbt seed, dbt run, dbt test
+1. Clone the repo
+2. Create virtual environment
+3. `pip install dbt-core dbt-duckdb`
+4. Configure `profiles.yml`
+5. Run `dbt seed`, `dbt run`, `dbt test`
