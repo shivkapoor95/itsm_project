@@ -6,23 +6,21 @@ Description - End-to-end analytics engineering project transforming raw ITSM inc
 Architecture
 <img width="2833" height="1390" alt="image" src="https://github.com/user-attachments/assets/346299d5-19f2-4bcf-88b6-de148e760fdd" />
 
-What it covers
+## What it covers
+- Layered architecture — staging, intermediate, marts
+- Star schema — fact and dimension tables
+- Incremental models
+- Data quality testing — 14 tests
+- Macros for reusable transformations
+- Snapshots for SCD Type 2 tracking
+- Seeds for reference data
+- dbt packages
 
-Layered architecture — staging, intermediate, marts
-Star schema — fact and dimension tables
-Incremental models
-Data quality testing — 14 tests
-Macros for reusable transformations
-Snapshots for SCD Type 2 tracking
-Seeds for reference data
-dbt packages
-
-Tech Stack
-
-dbt Core 1.11
-DuckDB
-Python
-Git
+## Tech Stack
+- dbt Core 1.11
+- DuckDB
+- Python
+- Git
 
 How to Run
 Steps for someone to clone and run the project themselves:
